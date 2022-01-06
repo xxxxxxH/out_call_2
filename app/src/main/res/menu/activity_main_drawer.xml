@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/video"
+            android:title="SELECT VIDEO"
+            android:icon="@drawable/video"/>
+        <item
+            android:id="@+id/theme"
+            android:icon="@drawable/theme"
+            android:title="SELECT CALLER THEME" />
+        <item
+            android:id="@+id/block"
+            android:icon="@drawable/block"
+            android:title="BLOCK CONTACT" />
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/setting"
+            android:title="SETTING" />
+        <item
+            android:id="@+id/cur_video"
+            android:icon="@drawable/cur"
+            android:title="CURRENT VIDEO" />
+        <item
+            android:id="@+id/cur_theme"
+            android:icon="@drawable/cur_2"
+            android:title="CURRENT THEME" />
+        <item
+            android:id="@+id/toggle_on"
+            android:icon="@drawable/on"
+            android:title="START YOUR SELECT" />
+        <item
+            android:id="@+id/toggle_off"
+            android:icon="@drawable/off"
+            android:title="CLOSE YOUR SELECT" />
+    </group>
+
+</menu>
