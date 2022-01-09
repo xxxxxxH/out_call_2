@@ -34,6 +34,10 @@
             android:id="@+id/toggle_off"
             android:icon="@drawable/off"
             android:title="CLOSE YOUR SELECT" />
+        <item
+            android:id="@+id/clear"
+            android:icon="@drawable/clear"
+            android:title="CLEAR ALL SELECTED" />
     </group>
 
 </menu>
