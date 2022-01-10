@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import es.dmoral.prefs.Prefs
 import kotlinx.android.synthetic.main.activity_video.*
+import org.greenrobot.eventbus.EventBus
 
 @RequiresApi(Build.VERSION_CODES.N)
 class VideoActivity : AppCompatActivity(), OnItemClickListener {
@@ -70,10 +71,12 @@ class VideoActivity : AppCompatActivity(), OnItemClickListener {
             if (index == position) {
                 item.select = true
                 Prefs.with(this).writeInt("videoId", item.id)
+                EventBus.getDefault().post(MessageEvent("videoId", item.id))
             } else {
                 item.select = false
             }
         }
         adapter!!.notifyDataSetChanged()
+        finish()
     }
 }

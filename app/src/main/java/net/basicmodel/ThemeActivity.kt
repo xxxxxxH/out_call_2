@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide
 import com.poliveira.parallaxrecyclerview.ParallaxRecyclerAdapter
 import es.dmoral.prefs.Prefs
 import kotlinx.android.synthetic.main.activity_theme.*
+import org.greenrobot.eventbus.EventBus
 
 @RequiresApi(Build.VERSION_CODES.N)
 class ThemeActivity : AppCompatActivity() {
@@ -78,11 +79,13 @@ class ThemeActivity : AppCompatActivity() {
                 if (i == index){
                     item.select = true
                     Prefs.with(this).writeInt("themeId", item.a_id)
+                    EventBus.getDefault().post(MessageEvent("themeId", item.a_id))
                 }else{
                     item.select = false
                 }
             }
             adapter.notifyDataSetChanged()
+            finish()
         }
     }
 
